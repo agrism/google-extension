@@ -10,12 +10,10 @@ chrome.storage.local.get("codesInJson",value =>{
 })
 
 chrome.storage.local.get("username",value =>{
-    console.log(value.username);
     username.value = value.username;
 })
 
 chrome.storage.local.get("password",value =>{
-    console.log(value.password);
     password.value = value.password;
 })
 
