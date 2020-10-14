@@ -21,6 +21,27 @@
         div {
             padding: 0 10px;
         }
+
+        #msg {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #b2e7b2;
+            display: block;
+            position: fixed;
+            min-width: 200px;
+            display: none;
+            border: 1px solid #7dac7d;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        #msg > div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
@@ -42,6 +63,7 @@
         <button id="btn">Save</button>
     </div>
 </div>
+<div id="msg"><div>Data saved.</div></div>
 
 </body>
 <script src="options.js"></script>
