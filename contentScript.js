@@ -3,7 +3,6 @@ var username = "";
 var password = "";
 
 window.onload = function () {
-    console.log('loaded')
 
     var u = document.querySelector('#username');
     var p = document.querySelector('#password');
