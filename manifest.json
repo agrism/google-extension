@@ -7,7 +7,11 @@
     "storage",
     "tabs",
     "*://*/*",
-    "http://*/*"
+    "http://*/*",
+    "webNavigation",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
   ],
   "background": {
     "scripts": ["background.js"],
