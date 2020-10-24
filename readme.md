@@ -1,4 +1,4 @@
-# Auto login
+# Auto login (chrome extension)
 
 1.Settings:
  - open options
