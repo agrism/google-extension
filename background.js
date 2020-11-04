@@ -13,45 +13,42 @@ chrome.runtime.onInstalled.addListener(function () {
 
 var url = "";
 
-/*
-            green: #97d697;
-            red: #cb8383;
-            violet: #c5afe0;
- */
-
 var colorGreen = '#acd4ac';
 var colorRed = '#ca9797';
 var colorViolet = '#d3c7e5';
 
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+function getFlagScript(country, color){
+    return 'var element=document.createElement("img");element.src="https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-'+country+'.png";element.style="position:fixed;left:0;bottom:10px;height:60px;";document.body.appendChild(element);'
+}
 
-    console.log(tab.url);
+function getBackGroundScript(country, color){
+    // return 'document.body.style.backgroundColor="' + color + '";document.body.style.backgroundImage = "url(\'https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-'+country+'-light.png\')";'
+}
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
     if (changeInfo.status == 'complete') {
         url = tab.url ?? "";
 
         if (url != undefined) {
 
-
             if (url.includes('https://admin.legacy.test')) {
                 chrome.tabs.executeScript(tabId, {
-                    code: 'document.body.style.backgroundColor="' + colorGreen + '";document.body.style.backgroundImage = "url(\'https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-gb-light.png\')";'
+                    code: getFlagScript('gb')
                 });
             } else if (url.includes('https://admin.travelfund.co.uk')) {
                 chrome.tabs.executeScript(tabId, {
-                    code: 'document.body.style.backgroundColor="' + colorRed + '";document.body.style.backgroundImage = "url(\'https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-gb-light.png\')";'
+                    code: getFlagScript('gb')
                 });
-            } else if (url.includes('https://admin.staging-manual-1.us.flynowpaylater.cloud/')) {
+            } else if (url.includes('https://admin.staging-manual-1.us.flynowpaylater.cloud')) {
                 chrome.tabs.executeScript(tabId, {
-                    code: 'document.body.style.backgroundColor="' + colorViolet + '";document.body.style.backgroundImage = "url(\'https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-us-light.png\')";'
+                    code: getFlagScript('us')
                 });
-            } else if (url.includes('https://admin.us.flynowpaylater.com/')) {
+            } else if (url.includes('https://admin.us.flynowpaylater.com')) {
                 chrome.tabs.executeScript(tabId, {
-                    code: 'document.body.style.backgroundColor="' + colorRed + '";document.body.style.backgroundImage = "url(\'https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-us-light.png\')";'
+                    code: getFlagScript('us')
                 });
             }
         }
     }
-
-})
-;
+});
