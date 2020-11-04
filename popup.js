@@ -3,6 +3,7 @@
 let local = document.getElementById('local');
 let prod = document.getElementById('prod');
 let stageUs = document.getElementById('stageUs');
+let prodUs = document.getElementById('prodUs');
 
 local.onclick = function (element) {
     chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
@@ -22,5 +23,12 @@ stageUs.onclick = function (element) {
     chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
         var tab = tabs[0];
         chrome.tabs.update(tab.id, {url: 'https://admin.staging-manual-1.us.flynowpaylater.cloud'});
+    });
+};
+
+prodUs.onclick = function (element) {
+    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+        var tab = tabs[0];
+        chrome.tabs.update(tab.id, {url: 'https://admin.us.flynowpaylater.com'});
     });
 };

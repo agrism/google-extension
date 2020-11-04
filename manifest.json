@@ -38,7 +38,8 @@
       "matches": [
         "https://admin.legacy.test/*",
         "https://admin.travelfund.co.uk/*",
-        "https://admin.staging-manual-1.us.flynowpaylater.cloud/*"
+        "https://admin.staging-manual-1.us.flynowpaylater.cloud/*",
+        "https://admin.us.flynowpaylater.com/*"
       ],
       "js": ["contentScript.js"]
     }
