@@ -4,6 +4,7 @@
     <style>
         div {
             display: block;
+            width: 200px;
             color: white;
             padding: 3px;
             border-radius: 5px;
@@ -16,26 +17,34 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        hr {
+            min-height: 2px;
+            background-color: black;
+            border: 1px solid black;
+        }
 
         #local{
             background-color: #324019;
         }
         #prod{
-            background-color: #881463;
+            background-color: #c655a4;
         }
-        #stageUs{
-            background-color: #3d8814;
+        #stageUs,#stageUk{
+            background-color: #60944a;
         }
-        #prodUs{
-            background-color: #a00d12;
+        #prodUs,#prodUk{
+            background-color: #e54a50;
         }
     </style>
 </head>
 <body>
-<div id="local">Local</div>
-<div id="prod">Prod(UK)</div>
-<div id="stageUs">Stage(Us)</div>
-<div id="prodUs">Prod(Us)</div>
+<div id="local"> - Local</div>
+<hr>
+<div id="stageUk"> - Stage [Uk] <img src="https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-gb.png" style="height: 40px;float: right;margin-top: -8px;"></div>
+<div id="prodUk"> - Prod [UK] <img src="https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-gb.png" style="height: 40px;float: right;margin-top: -8px;"></div>
+<hr>
+<div id="stageUs"> - Stage [Us] <img src="https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-us.png" style="height: 40px;float: right;margin-top: -8px;"></div>
+<div id="prodUs"> - Prod [Us] <img src="https://raw.githubusercontent.com/agrism/google-extension/master/images/flag-us.png" style="height: 40px;float: right;margin-top: -8px;"></div>
 <script src="popup.js"></script>
 </body>
 </html>
