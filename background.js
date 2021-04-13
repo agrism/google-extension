@@ -32,7 +32,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
         if (url != undefined) {
 
-            if (url.includes('https://admin.legacy.test')) {
+            if (url.includes('https://admin.flynowpaylater.test')) {
                 chrome.tabs.executeScript(tabId, {
                     code: getFlagScript('gb')
                 });

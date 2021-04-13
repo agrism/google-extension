@@ -11,7 +11,7 @@ let stageUs = document.getElementById('stageUs');
 local.onclick = function (element) {
     chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
         var tab = tabs[0];
-        chrome.tabs.update(tab.id, {url: 'https://admin.legacy.test'});
+        chrome.tabs.update(tab.id, {url: 'https://admin.flynowpaylater.test'});
     });
 };
 

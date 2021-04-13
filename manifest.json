@@ -36,7 +36,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://admin.legacy.test/*",
+        "https://admin.flynowpaylater.test/*",
         "https://admin.gb.flynowpaylater.com/*",
         "https://admin.us.flynowpaylater.com/*",
         "https://admin.staging-manual-1.us.flynowpaylater.cloud/*",
